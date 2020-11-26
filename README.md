@@ -8,6 +8,7 @@ Nothing new for now. Just making it work.
  - request is obsolete
  - check dependencies
  - add types to all classes
+ - implement tests
  - ...
 
 # Source

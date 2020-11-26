@@ -1,8 +1,9 @@
 {
   "name": "mega-client",
+  "description": "Client to access MEGA files.",
   "version": "0.0.4",
   "main": "build/index.js",
-  "type": "build/index.d.ts",
+  "types": "build/index.d.ts",
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
@@ -37,6 +38,14 @@
     "rules": {
       "semi": "error"
     }
+  },
+  "homepage": "https://github.com/TytiX/mega-client#readme",
+  "bugs": {
+    "url": "https://github.com/TytiX/mega-client/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TytiX/mega-client"
   },
   "license": "MIT"
 }

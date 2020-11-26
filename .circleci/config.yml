@@ -52,14 +52,20 @@ workflows:
   build-test-deploy:
     jobs:
       - build
+          filters:
+            tags:
+              only: /.*/
       - test:
           requires:
             - build
+          filters:
+            tags:
+              only: /.*/
       - deploy:
           requires:
             - test
           filters:
             tags:
-              only: /^v.*/
+              only: /.*/
             branches:
               ignore: /.*/

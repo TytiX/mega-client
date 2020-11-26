@@ -1,7 +1,7 @@
 {
   "name": "mega-client",
   "description": "Client to access MEGA files.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {

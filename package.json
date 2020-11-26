@@ -5,7 +5,8 @@
   "type": "build/index.d.ts",
   "scripts": {
     "dev": "nodemon",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "echo \"implement some\""
   },
   "devDependencies": {
     "@types/combined-stream": "^1.0.2",

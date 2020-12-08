@@ -62,10 +62,11 @@ function detectSize (cb: any) {
 
 function streamToPromise(stream: any, encoding = "utf8") {
   return new Promise((resolve, reject) => {
-    let data = "";
-    
-    stream.on("data", (chunk: any) => data += chunk);
-    stream.on("end", () => resolve(data));
+    const chunks: any = []
+    stream.on("data", (chunk: any) => {
+      chunks.push(chunk);
+    });
+    stream.on("end", () => resolve(Buffer.concat(chunks)));
     stream.on("error", (error: any) => reject(error));
   });
 }

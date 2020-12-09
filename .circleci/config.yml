@@ -31,7 +31,15 @@ jobs:
       - run:
           name: Run tests
           command: npm test
-
+      - store_test_results:
+          path: ./reports/junit/
+      - store_artifacts:
+          path: ./reports/junit
+      - run:
+          name: Run tests
+          command: npm run coverage
+      - store_artifacts:
+          path: reports/coverage
       - persist_to_workspace:
           root: ~/repo
           paths: .

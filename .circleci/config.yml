@@ -4,6 +4,9 @@
 #
 version: 2
 
+orbs:
+  coveralls: coveralls/coveralls@1.0.6
+
 defaults: &defaults
   working_directory: ~/repo
   docker:
@@ -40,7 +43,9 @@ jobs:
           name: Run tests
           command: npm run coverage
       - store_artifacts:
-          path: reports/coverage
+          path: ./reports/coverage
+      - coveralls/upload:
+          path_to_lcov: ./reports/coverage/lcov.info
       - persist_to_workspace:
           root: ~/repo
           paths: .

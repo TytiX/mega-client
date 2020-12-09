@@ -187,7 +187,7 @@ export class File extends EventEmitter {
     return this
   }
 
-  download (options: any, cb: any) {
+  download (options?: any, cb?: any) {
     if (typeof options === 'function') {
       cb = options
       options = {}

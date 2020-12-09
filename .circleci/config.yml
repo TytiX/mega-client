@@ -18,7 +18,8 @@ jobs:
       - run:
           name: Build lib
           command: npm run build
-
+      - store_artifacts:
+          path: ./build
       - persist_to_workspace:
           root: ~/repo
           paths: .
